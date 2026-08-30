@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Attend Mentors | Attendance Mentoring</title>
+
+<meta name="description" content="Attend Mentors works with schools, students and families to improve attendance through relationships, mentoring and belonging.">
+
+<style>
+
+:root{
+
+  --teal:#1b9c85;
+
+  --dark:#123c38;
+
+  --light:#eef8f5;
+
+  --text:#18302d;
+
+  --muted:#60736f;
+
+  --white:#ffffff;
+
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+
+  margin:0;
+
+  font-family:Arial,Helvetica,sans-serif;
+
+  color:var(--text);
+
+  line-height:1.6;
+
+}
+
+.container{
+
+  width:min(1120px,92%);
+
+  margin:auto;
+
+}
+
+header{
+
+  background:white;
+
+  border-bottom:1px solid #e3ece9;
+
+}
+
+.nav{
+
+  min-height:78px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+}
+
+.brand{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  text-decoration:none;
+
+  color:var(--dark);
+
+  font-size:23px;
+
+  font-weight:900;
+
+}
+
+.logo{
+
+  width:52px;
+
+  height:52px;
+
+  border-radius:12px;
+
+  background:var(--teal);
+
+  color:white;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-weight:900;
+
+}
+
+nav{
+
+  display:flex;
+
+  gap:22px;
+
+  align-items:center;
+
+}
+
+nav a{
+
+  color:var(--dark);
+
+  text-decoration:none;
+
+  font-weight:700;
+
+}
+
+.btn{
+
+  display:inline-block;
+
+  padding:13px 20px;
+
+  border-radius:11px;
+
+  text-decoration:none;
+
+  font-weight:800;
+
+}
+
+.primary{
+
+  background:var(--teal);
+
+  color:white;
+
+}
+
+.secondary{
+
+  border:1px solid #cbdcd8;
+
+  color:var(--dark);
+
+}
+
+.hero{
+
+  background:linear-gradient(135deg,var(--light),white);
+
+  padding:90px 0;
+
+}
+
+.hero-grid{
+
+  display:grid;
+
+  grid-template-columns:1.1fr .9fr;
+
+  gap:60px;
+
+  align-items:center;
+
+}
+
+.badge{
+
+  display:inline-block;
+
+  background:#d9f0ea;
+
+  color:#147965;
+
+  padding:7px 13px;
+
+  border-radius:999px;
+
+  font-size:12px;
+
+  font-weight:900;
+
+  text-transform:uppercase;
+
+  letter-spacing:1px;
+
+}
+
+h1{
+
+  font-size:clamp(44px,6vw,76px);
+
+  line-height:1.03;
+
+  letter-spacing:-3px;
+
+  color:var(--dark);
+
+  margin:18px 0;
+
+}
+
+h1 span{color:var(--teal)}
+
+h2{
+
+  font-size:clamp(31px,4vw,48px);
+
+  line-height:1.1;
+
+  color:var(--dark);
+
+}
+
+.hero p{
+
+  font-size:20px;
+
+  color:var(--muted);
+
+}
+
+.actions{
+
+  display:flex;
+
+  gap:12px;
+
+  flex-wrap:wrap;
+
+  margin-top:28px;
+
+}
+
+.hero-card{
+
+  background:var(--teal);
+
+  border-radius:28px;
+
+  padding:34px;
+
+  color:white;
+
+}
+
+.hero-card h3{
+
+  font-size:26px;
+
+  margin-top:0;
+
+}
+
+.stat{
+
+  padding:19px 0;
+
+  border-top:1px solid rgba(255,255,255,.25);
+
+}
+
+.stat strong{
+
+  font-size:28px;
+
+  display:block;
+
+}
+
+section{
+
+  padding:85px 0;
+
+}
+
+.center{
+
+  max-width:760px;
+
+  margin:0 auto 42px;
+
+  text-align:center;
+
+}
+
+.center p,
+
+.card p,
+
+.copy p{
+
+  color:var(--muted);
+
+}
+
+.cards{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:20px;
+
+}
+
+.card{
+
+  padding:29px;
+
+  border:1px solid #dfeae7;
+
+  border-radius:21px;
+
+  background:white;
+
+}
+
+.card-number{
+
+  width:46px;
+
+  height:46px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border-radius:13px;
+
+  background:#e0f3ee;
+
+  color:var(--teal);
+
+  font-weight:900;
+
+}
+
+.card h3{
+
+  color:var(--dark);
+
+}
+
+.soft{
+
+  background:#f6faf9;
+
+}
+
+.school-grid{
+
+  display:grid;
+
+  grid-template-columns:.85fr 1.15fr;
+
+  gap:60px;
+
+  align-items:center;
+
+}
+
+.quote{
+
+  background:var(--dark);
+
+  color:white;
+
+  border-radius:27px;
+
+  padding:40px;
+
+  font-size:24px;
+
+  font-weight:700;
+
+}
+
+.steps{
+
+  display:grid;
+
+  gap:18px;
+
+}
+
+.step{
+
+  display:grid;
+
+  grid-template-columns:42px 1fr;
+
+  gap:14px;
+
+}
+
+.number{
+
+  width:38px;
+
+  height:38px;
+
+  border-radius:50%;
+
+  background:var(--teal);
+
+  color:white;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-weight:900;
+
+}
+
+.impact{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:20px;
+
+}
+
+.impact-box{
+
+  background:var(--dark);
+
+  color:white;
+
+  border-radius:21px;
+
+  padding:29px;
+
+}
+
+.impact-box strong{
+
+  display:block;
+
+  font-size:43px;
+
+}
+
+.impact-box p{
+
+  color:#cfe3df;
+
+}
+
+.cta{
+
+  background:var(--teal);
+
+  color:white;
+
+  padding:48px;
+
+  border-radius:28px;
+
+}
+
+.cta h2{
+
+  color:white;
+
+  margin-top:0;
+
+}
+
+.cta p{
+
+  font-size:18px;
+
+}
+
+.contact{
+
+  display:grid;
+
+  grid-template-columns:.8fr 1.2fr;
+
+  gap:50px;
+
+}
+
+form{
+
+  padding:29px;
+
+  border:1px solid #dfeae7;
+
+  border-radius:21px;
+
+}
+
+label{
+
+  display:block;
+
+  font-weight:800;
+
+  margin:12px 0 6px;
+
+}
+
+input,select,textarea{
+
+  width:100%;
+
+  padding:13px;
+
+  border:1px solid #ccdcd8;
+
+  border-radius:9px;
+
+  font:inherit;
+
+}
+
+textarea{
+
+  min-height:120px;
+
+}
+
+button{
+
+  border:0;
+
+  cursor:pointer;
+
+  margin-top:15px;
+
+}
+
+footer{
+
+  background:var(--dark);
+
+  color:#cde0dc;
+
+  padding:38px 0;
+
+}
+
+@media(max-width:850px){
+
+  nav{display:none}
+
+  .hero-grid,
+
+  .school-grid,
+
+  .contact{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .cards,
+
+  .impact{
+
+    grid-template-columns:1fr;
+
+  }
+
+  h1{letter-spacing:-2px}
+
+  .hero{padding:65px 0}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container nav">
+
+<a class="brand" href="#">
+
+<div class="logo">AM</div>
+
+Attend Mentors
+
+</a>
+
+<nav>
+
+<a href="#approach">Our Approach</a>
+
+<a href="#schools">For Schools</a>
+
+<a href="#families">For Families</a>
+
+<a href="#impact">Impact</a>
+
+<a class="btn primary" href="#contact">Let's Talk</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<main>
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<span class="badge">Attendance mentoring that builds belonging</span>
+
+<h1>
+
+Better attendance starts with
+
+<span>better relationships.</span>
+
+</h1>
+
+<p>
+
+Attend Mentors works alongside schools, students and families
+
+to understand the reasons behind absence, build trust and create
+
+practical routes back to consistent attendance.
+
+</p>
+
+<div class="actions">
+
+<a class="btn primary" href="#contact">Start a conversation →</a>
+
+<a class="btn secondary" href="#approach">How we work</a>
+
+</div>
+
+</div>
+
+<div class="hero-card">
+
+<h3>The Attend Mentors difference</h3>
+
+<p>A human approach to an attendance challenge.</p>
+
+<div class="stat">
+
+<strong>1:1</strong>
+
+Individual mentoring built around each young person.
+
+</div>
+
+<div class="stat">
+
+<strong>Family</strong>
+
+Communication that keeps parents and carers connected.
+
+</div>
+
+<div class="stat">
+
+<strong>Practical</strong>
+
+Tools, routines and achievable next steps.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="approach">
+
+<div class="container">
+
+<div class="center">
+
+<span class="badge">Our Approach</span>
+
+<h2>
+
+Attendance is a symptom.
+
+We look for the story behind it.
+
+</h2>
+
+<p>
+
+Every absence has a context. Our mentors create space for young
+
+people to be heard, identify barriers and work on realistic next steps.
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-number">1</div>
+
+<h3>Listen first</h3>
+
+<p>
+
+We build trust and understand the young person's experience before
+
+deciding what support is needed.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-number">2</div>
+
+<h3>Build the plan</h3>
+
+<p>
+
+Mentors help students turn challenges into manageable actions,
+
+routines and achievable attendance goals.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-number">3</div>
+
+<h3>Stay connected</h3>
+
+<p>
+
+We work with schools and families to maintain communication,
+
+celebrate progress and respond when things change.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="soft" id="schools">
+
+<div class="container school-grid">
+
+<div class="quote">
+
+“We don't simply ask, ‘Why aren't you coming to school?’
+
+We ask, ‘What would make coming to school feel possible again?’”
+
+</div>
+
+<div class="copy">
+
+<span class="badge">For Schools</span>
+
+<h2>An extension of your attendance team.</h2>
+
+<p>
+
+Attend Mentors provides additional capacity for schools that want
+
+a relationship-led response to persistent and emerging attendance concerns.
+
+</p>
+
+<div class="steps">
+
+<div class="step">
+
+<div class="number">1</div>
+
+<div>
+
+<strong>Identify</strong><br>
+
+Understand priority students and the barriers affecting attendance.
+
+</div>
+
+</div>
+
+<div class="step">
+
+<div class="number">2</div>
+
+<div>
+
+<strong>Mentor</strong><br>
+
+Deliver consistent one-to-one sessions focused on trust,
+
+belonging and problem-solving.
+
+</div>
+
+</div>
+
+<div class="step">
+
+<div class="number">3</div>
+
+<div>
+
+<strong>Engage families</strong><br>
+
+Keep communication open with parents and carers.
+
+</div>
+
+</div>
+
+<div class="step">
+
+<div class="number">4</div>
+
+<div>
+
+<strong>Review impact</strong><br>
+
+Share progress and identify what needs to happen next.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="families">
+
+<div class="container">
+
+<div class="center">
+
+<span class="badge">More than attendance</span>
+
+<h2>Helping young people reconnect with school.</h2>
+
+<p>
+
+Our work can support confidence, routine, communication,
+
+motivation, problem-solving and a stronger sense of belonging.
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>One-to-one mentoring</h3>
+
+<p>
+
+Regular, trusted conversations focused on understanding barriers
+
+and finding a practical way forward.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Practical strategies</h3>
+
+<p>
+
+Simple routines and tools that can make mornings, preparation
+
+and returning to school more manageable.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Belonging & confidence</h3>
+
+<p>
+
+Helping young people feel seen, supported and connected
+
+to their education and future.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="soft" id="impact">
+
+<div class="container">
+
+<div class="center">
+
+<span class="badge">Impact</span>
+
+<h2>Small changes can create significant progress.</h2>
+
+<p>
+
+Some students in the Attend Mentors school pilot improved their
+
+attendance by 8–15% after joining the programme.
+
+</p>
+
+</div>
+
+<div class="impact">
+
+<div class="impact-box">
+
+<strong>8–15%</strong>
+
+<p>
+
+Attendance improvement achieved by some students in the pilot.
+
+</p>
+
+</div>
+
+<div class="impact-box">
+
+<strong>1:1</strong>
+
+<p>
+
+Personalised mentoring focused on individual needs.
+
+</p>
+
+</div>
+
+<div class="impact-box">
+
+<strong>Family</strong>
+
+<p>
+
+Supporting communication between young people, families and schools.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="cta">
+
+<h2>
+
+Ready to make attendance a relationship issue,
+
+not just a numbers issue?
+
+</h2>
+
+<p>
+
+Let's talk about what could work for your school,
+
+organisation or family.
+
+</p>
+
+<a class="btn secondary"
+
+style="background:white"
+
+href="#contact">
+
+Talk to Attend Mentors
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container contact">
+
+<div>
+
+<span class="badge">Contact</span>
+
+<h2>Let's talk about attendance.</h2>
+
+<p>
+
+Tell us a little about your school, organisation or situation
+
+and we'll get back to you.
+
+</p>
+
+<p>
+
+<strong>Attend Mentors</strong><br>
+
+Attendance mentoring · Family engagement · Educator training · Workshops
+
+</p>
+
+</div>
+
+<form id="contactForm">
+
+<label>Name</label>
+
+<input type="text" required>
+
+<label>Email</label>
+
+<input type="email" required>
+
+<label>School / organisation</label>
+
+<input type="text">
+
+<label>I'm interested in</label>
+
+<select>
+
+<option>Attendance mentoring</option>
+
+<option>School partnership</option>
+
+<option>Educator training</option>
+
+<option>Online workshops</option>
+
+</select>
+
+<label>Message</label>
+
+<textarea required></textarea>
+
+<button class="btn primary" type="submit">
+
+Send enquiry
+
+</button>
+
+<p id="message" style="display:none;color:#147965;font-weight:bold">
+
+Thank you for getting in touch.
+
+</p>
+
+</form>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+<div class="container">
+
+<strong>Attend Mentors</strong><br>
+
+Attendance. Belonging. Opportunity.
+
+</div>
+
+</footer>
+
+<script>
+
+document
+
+.getElementById("contactForm")
+
+.addEventListener("submit",function(event){
+
+event.preventDefault();
+
+document.getElementById("message").style.display="block";
+
+});
+
+</script>
+
+</body>
+
+</html>
