@@ -1086,49 +1086,31 @@ Attendance mentoring · Family engagement · Educator training · Workshops
 
 </div>
 
-<form id="contactForm">
+<form action="https://formspree.io/f/meaqoygd" method="POST">
 
-<label>Name</label>
+  <label>Name</label>
+  <input type="text" name="name" required>
 
-<input type="text" required>
+  <label>Email</label>
+  <input type="email" name="email" required>
 
-<label>Email</label>
+  <label>School / organisation</label>
+  <input type="text" name="school_organisation">
 
-<input type="email" required>
+  <label>I'm interested in</label>
+  <select name="interest">
+    <option>Attendance mentoring</option>
+    <option>School partnership</option>
+    <option>Educator training</option>
+    <option>Online workshops</option>
+  </select>
 
-<label>School / organisation</label>
+  <label>Message</label>
+  <textarea name="message" required></textarea>
 
-<input type="text">
-
-<label>I'm interested in</label>
-
-<select>
-
-<option>Attendance mentoring</option>
-
-<option>School partnership</option>
-
-<option>Educator training</option>
-
-<option>Online workshops</option>
-
-</select>
-
-<label>Message</label>
-
-<textarea required></textarea>
-
-<button class="btn primary" type="submit">
-
-Send enquiry
-
-</button>
-
-<p id="message" style="display:none;color:#147965;font-weight:bold">
-
-Thank you for getting in touch.
-
-</p>
+  <button class="btn primary" type="submit">
+    Send enquiry
+  </button>
 
 </form>
 
@@ -1150,21 +1132,6 @@ Attendance. Belonging. Opportunity.
 
 </footer>
 
-<script>
-
-document
-
-.getElementById("contactForm")
-
-.addEventListener("submit",function(event){
-
-event.preventDefault();
-
-document.getElementById("message").style.display="block";
-
-});
-
-</script>
 
 </body>
 
