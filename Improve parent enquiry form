@@ -1122,11 +1122,15 @@ Attendance mentoring · Family engagement · Educator training · Workshops
   </select>
 
   <label>Tell us briefly how we can help</label>
-  <textarea name="message" required></textarea>
+<textarea name="message" required></textarea>
 
-  <button class="btn primary" type="submit">
-    Send enquiry
-  </button>
+<button class="btn primary" type="submit">
+  Send enquiry
+</button>
+
+<p style="margin-top:14px; font-size:14px; color:#60736f;">
+  We’ll get back to you as soon as possible.
+</p>
 
 </form>
 
