@@ -355,11 +355,19 @@ section{
   grid-template-columns:repeat(2,1fr);
   gap:20px;
 }
-
+.why-grid .card:last-child{
+  grid-column:1 / -1;
+  width:calc(50% - 10px);
+  justify-self:center;
+}
 @media (max-width:700px){
   .why-grid{
     grid-template-columns:1fr;
   }
+.why-grid .card:last-child{
+  grid-column:auto;
+  width:auto;
+}  
 }
 .card{
 
